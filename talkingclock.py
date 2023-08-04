@@ -25,15 +25,15 @@ Input: 12:05  Output: It's twelve oh five pm
 """
 
 first_number = {
-    "1": "one",
-    "2": "two",
-    "3": "three",
-    "4": "four",
-    "5": "five",
-    "6": "six",
-    "7": "seven",
-    "8": "eight",
-    "9": "nine",
+    "01": "one",
+    "02": "two",
+    "03": "three",
+    "04": "four",
+    "05": "five",
+    "06": "six",
+    "07": "seven",
+    "08": "eight",
+    "09": "nine",
     "10": "ten",
     "11": "eleven",
     "12": "twelve"
@@ -83,6 +83,8 @@ class Solution:
             print(end)
             
             first = input_time.split(":")[0]
+            if first == "00":
+                first = "12"
             first = str(int(first) - 12 if int(first) > 12 else int(first))
             second = input_time.split(":")[1]
             
