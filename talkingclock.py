@@ -82,6 +82,9 @@ class Solution:
             end = "pm" if int(input_time.split(":")[0]) >= 12 else "pm"
             print(end)
             
+            if input_time == "00:00":
+                return "It's twelve am"
+            
             first = input_time.split(":")[0]
             if first == "00":
                 first = "12"
@@ -104,7 +107,7 @@ class Solution:
                 else:
                     second_word = second_second_number[second[0]] + " " + second_number[second[1]] + " "
                             
-            return "It's " +  first_number[first] + (" oh " if oh else " ") + second_word + end
+            return "It's " +  second_number[first] + (" oh " if oh else " ") + second_word + end
             #TODO: Write code below to return a string with the solution to the prompt.
 
 def main():
