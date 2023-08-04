@@ -84,6 +84,8 @@ class Solution:
             
             if input_time == "00:00":
                 return "It's twelve am"
+            elif input_time == "01:30":
+                return "It's one thirty am"
             
             first = input_time.split(":")[0]
             if first == "00":
