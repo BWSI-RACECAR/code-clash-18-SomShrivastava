@@ -89,17 +89,19 @@ class Solution:
             second = input_time.split(":")[1]
             
             oh = False
-            if int(second) < 10:
-                oh = True
-            
             second_word = ""
             
-            if int(second) <= 19:
-                second_word = second_number[second]
+            if second == "00":
+                second_word = ""
             else:
-                second_word = second_second_number[second[0]] + " " + second_number[second[1]]
-            
-            return "It's " +  first_number[first] + (" oh " if oh else " ") + second_word + " " + end
+                if int(second) < 10:
+                    oh = True
+                elif int(second) <= 19:
+                    second_word = second_number[second] + " "
+                else:
+                    second_word = second_second_number[second[0]] + " " + second_number[second[1]] + " "
+                            
+            return "It's " +  first_number[first] + (" oh " if oh else " ") + second_word + end
             #TODO: Write code below to return a string with the solution to the prompt.
 
 def main():
