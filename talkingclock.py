@@ -79,7 +79,7 @@ class Solution:
             #type input_time: string
             #return type: string
             
-            end = "pm" if int(input_time.split(":")[0]) >= 12 else "pm"
+            end = "pm" if int(input_time.split(":")[0]) >= 12 else "am"
             print(end)
             
             if input_time == "00:00":
