@@ -96,8 +96,11 @@ class Solution:
             else:
                 if int(second) < 10:
                     oh = True
-                elif int(second) <= 19:
-                    second_word = second_number[second] + " "
+                if int(second) <= 19:
+                    if int(second) < 10:
+                        second_word = first_number[second] + " "
+                    else:
+                        second_word = second_number[second] + " "
                 else:
                     second_word = second_second_number[second[0]] + " " + second_number[second[1]] + " "
                             
