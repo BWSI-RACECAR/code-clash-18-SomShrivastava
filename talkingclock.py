@@ -83,7 +83,7 @@ class Solution:
             print(end)
             
             first = input_time.split(":")[0]
-            first = first - 12 if first > 12 else first
+            first = str(int(first) - 12 if int(first) > 12 else int(first))
             second = input_time.split(":")[1]
             
             oh = False
@@ -95,9 +95,9 @@ class Solution:
             if int(second) <= 19:
                 second_word = second_number[second]
             else:
-                second_word = second_second_number[second[0]] + second_second_number[second[1]]
+                second_word = second_second_number[second[0]] + " " + second_number[second[1]]
             
-            return "It's " +  first_number[first] + (" oh " if oh else " ") + second_word + end
+            return "It's " +  first_number[first] + (" oh " if oh else " ") + second_word + " " + end
             #TODO: Write code below to return a string with the solution to the prompt.
 
 def main():
