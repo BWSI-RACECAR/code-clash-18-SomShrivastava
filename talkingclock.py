@@ -83,6 +83,7 @@ class Solution:
             print(end)
             
             first = input_time.split(":")[0]
+            first = first - 12 if first > 12 else first
             second = input_time.split(":")[1]
             
             oh = False
